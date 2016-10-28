@@ -8,14 +8,12 @@ php:
 
 env:
   matrix:
-    - DB=POSTGRESQL CORE_RELEASE=master
+    - DB=PGSQL
 
 before_script:
  - composer self-update || true
  - phpenv rehash
- - git clone git://github.com/silverstripe-labs/silverstripe-travis-support.git ~/travis-support
- - php ~/travis-support/travis_setup.php --source `pwd` --target ~/builds/ss
- - cd ~/builds/ss
+ - COMPOSER_ROOT_VERSION=2.0.x-dev composer install --prefer-dist
 
 script:
- - vendor/bin/phpunit framework/tests
+ - vendor/bin/phpunit

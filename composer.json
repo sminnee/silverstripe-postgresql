@@ -10,14 +10,18 @@
 		}
 	],
 	"require": {
-		"silverstripe/framework": "~4.0"
+		"silverstripe/framework": "~4.0@dev"
 	},
 	"require-dev": {
-		"phpunit/PHPUnit": "~4.8"
+		"phpunit/PHPUnit": "~4.8",
+        "silverstripe/cms": "~4.0@dev",
+        "silverstripe/siteconfig": "~4.0@dev",
+        "silverstripe/reports": "~4.0@dev"
 	},
 	"extra": {
 		"branch-alias": {
 			"dev-master": "2.0.x-dev"
 		}
-	}
+	},
+    "minimum-stability": "stable"
 }

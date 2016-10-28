@@ -1,0 +1,6 @@
+vendor/
+framework/
+cms/
+siteconfig/
+reports/
+composer.lock
